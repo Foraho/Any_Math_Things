@@ -1,6 +1,8 @@
-# -*- coding: utf-8 -*-
-import math
-
+def factorial(num):
+    number = 1
+    for i in range(1,num+1):
+        number*=i
+    return number
 
 '''
  k       n!
@@ -14,7 +16,7 @@ def Binomial_Coefficient(n,k):
     :param k: total number of combinations // общее кол-во сочетаний
     :return: the number of combinations of k elements in n // число сочетаний k элементов в n
     '''
-    return int((math.factorial(n)) / (math.factorial(k) * (math.factorial(n-k)))) # применяем формулу биноминального коофицента
+    return int((factorial(n)) / (factorial(k) * (factorial(n-k)))) # применяем формулу биноминального коофицента
 
 def Euclid_Method(a,b):
     """
@@ -61,3 +63,11 @@ def Get_Any_Area (lst): # https://youtu.be/vUCJWwGQEYI
     x[1] += lst[0][0] * lst[len(lst) - 1][1]
     x = list(sorted(x)) # сортируем значения по возрастанию
     return (x[1] - x[0]) / 2
+
+# print(Get_Any_Area([[3,0],[1,4],[2,7],[3,9],[4,8],[7,10],[8,7],[10,3],[6,2]]))
+# print(Euclid_Method(78125, 16807))
+
+
+a = int(input())
+b = int(input())
+print(Binomial_Coefficient(a,b))
