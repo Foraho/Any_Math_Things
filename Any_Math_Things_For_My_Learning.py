@@ -63,11 +63,3 @@ def Get_Any_Area (lst): # https://youtu.be/vUCJWwGQEYI
     x[1] += lst[0][0] * lst[len(lst) - 1][1]
     x = list(sorted(x)) # сортируем значения по возрастанию
     return (x[1] - x[0]) / 2
-
-# print(Get_Any_Area([[3,0],[1,4],[2,7],[3,9],[4,8],[7,10],[8,7],[10,3],[6,2]]))
-# print(Euclid_Method(78125, 16807))
-
-
-a = int(input())
-b = int(input())
-print(Binomial_Coefficient(a,b))
